@@ -1,0 +1,39 @@
+export const siteConfig = {
+  siteName: 'Home Appliance Service Pro',
+  tagline: 'Expert Technicians | Same-Day Service | Genuine Parts | Doorstep Repair',
+  description: 'Multi Brand Home Appliance Repair & Installation Service providing expert repairs for washing machines, AC, refrigerators, TVs, microwaves, and water purifiers.',
+  
+  contact: {
+    phone: '+91 12345 67890',
+    email: 'service@appliancepro.com',
+    whatsapp: '+91 12345 67890',
+    address: 'Trichy, Tamil Nadu, India',
+    workingHours: '24/7 Emergency Service Available',
+  },
+  
+  social: {
+    facebook: 'https://facebook.com',
+    twitter: 'https://twitter.com',
+    instagram: 'https://instagram.com',
+    linkedin: 'https://linkedin.com',
+  },
+  
+  serviceAreas: [
+    'Chennai',
+    'Trichy',
+    'Madurai',
+    'Coimbatore',
+    'Salem',
+    'Tiruppur',
+  ],
+  
+  stats: {
+    experience: '15+',
+    clients: '50000+',
+    repairs: '10000+',
+    rating: 5,
+    reviews: 300,
+  },
+  
+  formspreeEndpoint: 'YOUR_FORMSPREE_ID', // Replace with actual Formspree ID
+};
