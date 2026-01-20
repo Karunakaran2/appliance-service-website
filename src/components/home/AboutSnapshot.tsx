@@ -25,7 +25,7 @@ const AboutSnapshot = () => {
               <img 
                 src="/assets/images/placeholders/about-service.png" 
                 alt="About Our Service" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover transition-transform duration-500"
               />
             </div>
           </motion.div>

@@ -189,8 +189,8 @@
     }
   },
   "servicesPage": {
-    "title": "Home Appliance Repair & Installation Services in Chennai & Trichy",
-    "subtitle": "We provide professional, fast, and affordable multi-brand home appliance repair and installation services across Chennai, Trichy, and nearby areas. With over 15+ years of experience, our expert technicians handle all major appliance issues using genuine spare parts and transparent pricing. Whether it’s an urgent breakdown or routine maintenance, we ensure same-day doorstep service for your convenience.",
+    "title": "Home Appliance Repair & Installation Services in Sivagangai & Karaikudi",
+    "subtitle": "We provide professional, fast, and affordable multi-brand home appliance repair and installation services across Sivagangai, Karaikudi, and nearby areas. With over 15+ years of experience, our expert technicians handle all major appliance issues using genuine spare parts and transparent pricing. Whether it’s an urgent breakdown or routine maintenance, we ensure same-day doorstep service for your convenience.",
     "readMore": "Read More",
     "commonProblems": "Common Problems We Fix",
     "bookNow": "Book Now",
@@ -221,7 +221,7 @@
     "timelyDelivery": "Timely Delivery"
   },
   "stats": {
-    "clients": "Satisfied Clients",
+    "clients": "Clients Target",
     "experience": "Years Experience",
     "repairs": "Repairs Done"
   },
@@ -323,7 +323,7 @@
   "faqData": {
     "1": {
       "question": "What areas do you serve?",
-      "answer": "We provide home appliance repair services across Tamil Nadu, including Chennai, Trichy, Madurai, Coimbatore, Salem, and Tiruppur. Contact us to check if we serve your area."
+      "answer": "We provide home appliance repair services across Tamil Nadu, including Sivagangai, Karaikudi, Madurai, Coimbatore, Salem, and Tiruppur. Contact us to check if we serve your area."
     },
     "2": {
       "question": "Do you provide same-day service?",
@@ -372,7 +372,7 @@
   },
   "serviceDetails": {
     "washing-machine": {
-      "title": "Washing Machine Repair Service in Chennai & Trichy",
+      "title": "Washing Machine Repair Service in Sivagangai & Karaikudi",
       "intro": "We offer professional washing machine repair services for all major brands and models. Our technicians specialize in diagnosing and fixing issues quickly, ensuring smooth and efficient performance.",
       "problemsTitle": "Common Problems",
       "problems": [
@@ -419,7 +419,7 @@
       ]
     },
     "ac-service": {
-      "title": "AC Service & Gas Refill in Chennai & Trichy",
+      "title": "AC Service & Gas Refill in Sivagangai & Karaikudi",
       "intro": "Complete AC installation, servicing, gas refilling, and breakdown repair for all brands. We ensure efficient cooling and energy-saving performance.",
       "servicesTitle": "Services Offered",
       "services": [
@@ -465,7 +465,7 @@
       ]
     },
     "refrigerator": {
-      "title": "Refrigerator Repair Service in Chennai & Trichy",
+      "title": "Refrigerator Repair Service in Sivagangai & Karaikudi",
       "intro": "Expert solutions for cooling issues, gas leakage, and compressor problems. We handle single door, double door, and side-by-side refrigerators.",
       "issuesTitle": "Issues We Fix",
       "issues": [
@@ -503,7 +503,7 @@
       ]
     },
     "television": {
-      "title": "Television Repair Service in Chennai & Trichy",
+      "title": "Television Repair Service in Sivagangai & Karaikudi",
       "intro": "Professional LED, LCD, and Smart TV repair at your doorstep. We fix display issues, sound problems, and motherboard failures.",
       "supportedTitle": "Supported TVs",
       "supported": [
@@ -539,7 +539,7 @@
       ]
     },
     "microwave": {
-      "title": "Microwave Oven Repair Service in Chennai & Trichy",
+      "title": "Microwave Oven Repair Service in Sivagangai & Karaikudi",
       "intro": "Safe and efficient microwave servicing and repair by trained technicians. We fix heating issues, control panel faults, and more.",
       "issuesTitle": "Common Issues",
       "issues": [
@@ -570,7 +570,7 @@
       ]
     },
     "water-purifier": {
-      "title": "Water Purifier Service in Chennai & Trichy",
+      "title": "Water Purifier Service in Sivagangai & Karaikudi",
       "intro": "RO, UV, and water purifier installation, repair, and filter replacement services. We ensure you get clean and safe drinking water.",
       "servicesTitle": "Services",
       "services": [

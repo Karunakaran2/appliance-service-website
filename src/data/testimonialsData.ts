@@ -13,7 +13,7 @@ export const testimonialsData: Testimonial[] = [
   {
     id: 1,
     name: 'Rajesh Kumar',
-    location: 'Chennai',
+    location: 'Sivagangai',
     service: 'AC Service',
     rating: 5,
     review: 'Excellent service! The technician arrived on time and fixed my AC within an hour. Very professional and the pricing was transparent. Highly recommended!',
@@ -22,7 +22,7 @@ export const testimonialsData: Testimonial[] = [
   {
     id: 2,
     name: 'Priya Sharma',
-    location: 'Trichy',
+    location: 'Karaikudi',
     service: 'Washing Machine Repair',
     rating: 5,
     review: 'My washing machine was making strange noises. They diagnosed the problem quickly and replaced the faulty part with genuine Samsung parts. Great service!',

@@ -9,7 +9,7 @@ export const faqData: FAQ[] = [
   {
     id: 1,
     question: 'What areas do you serve?',
-    answer: 'We provide home appliance repair services across Tamil Nadu, including Chennai, Trichy, Madurai, Coimbatore, Salem, and Tiruppur. Contact us to check if we serve your area.',
+    answer: 'We provide home appliance repair services across Tamil Nadu, including Sivagangai, Karaikudi, Madurai, Coimbatore, Salem, and Tiruppur. Contact us to check if we serve your area.',
     category: 'Service Area',
   },
   {

@@ -10,7 +10,7 @@ const StatsSection = () => {
     const duration = 2000;
     const steps = 60;
     const clientTarget = 50000;
-    const experienceTarget = 15;
+    const experienceTarget = 8;
     const repairsTarget = 10000;
 
     let current = 0;

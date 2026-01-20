@@ -103,7 +103,7 @@ const Footer = () => {
               {servicesData.slice(0, 6).map((service) => (
                 <li key={service.id}>
                   <Link
-                    to={`/services#${service.slug}`}
+                    to={`/services/${service.slug}`}
                     className="text-sm hover:text-primary-400 transition-colors duration-300"
                   >
                     {service.name}
