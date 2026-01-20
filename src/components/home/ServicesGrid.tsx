@@ -50,7 +50,7 @@ const ServicesGrid = () => {
                   {t(`services.${service.slug}.shortDesc`)}
                 </p>
               <Link
-                to={`/services#${service.slug}`}
+                to={`/services/${service.slug}`}
                 className="inline-flex items-center space-x-2 text-primary-600 dark:text-primary-400 font-semibold group-hover:text-secondary-600 dark:group-hover:text-secondary-400 transition-colors duration-300"
               >
                 <span>{t('services.learnMore')}</span>

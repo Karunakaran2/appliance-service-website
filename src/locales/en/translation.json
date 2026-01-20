@@ -397,6 +397,25 @@
         "Transparent pricing",
         "Experienced technicians",
         "Service warranty"
+      ],
+      "brandsTitle": "Brands We Service",
+      "brands": [
+        "Samsung",
+        "LG",
+        "Whirlpool",
+        "Bosch",
+        "IFB",
+        "Godrej",
+        "Panasonic",
+        "Siemens",
+        "Haier"
+      ],
+      "processTitle": "Our Repair Process",
+      "process": [
+        "Diagnosis: Detailed inspection of the issue",
+        "Quote: Transparent pricing estimation",
+        "Repair: Fixing with genuine parts",
+        "Testing: Final performance check"
       ]
     },
     "ac-service": {
@@ -424,6 +443,25 @@
         "Clean & neat service",
         "Energy-efficient solutions",
         "Same-day service"
+      ],
+      "brandsTitle": "Brands We Service",
+      "brands": [
+        "Voltas",
+        "Blue Star",
+        "Daikin",
+        "LG",
+        "Samsung",
+        "Hitachi",
+        "Carrier",
+        "O General",
+        "Panasonic"
+      ],
+      "processTitle": "Our Service Process",
+      "process": [
+        "Inspection: Checking gas levels and filters",
+        "Cleaning: Deep cleaning of indoor/outdoor units",
+        "Repair/Refill: Fixing issues or topping up gas",
+        "Verification: Cooling performance test"
       ]
     },
     "refrigerator": {
@@ -443,6 +481,25 @@
         "Genuine spare parts",
         "Affordable pricing",
         "Warranty on service"
+      ],
+      "brandsTitle": "Brands We Service",
+      "brands": [
+        "LG",
+        "Samsung",
+        "Whirlpool",
+        "Godrej",
+        "Haier",
+        "Bosch",
+        "Panasonic",
+        "Hitachi",
+        "Kelvinator"
+      ],
+      "processTitle": "Repair Steps",
+      "process": [
+        "Assessment: Identifying the fault source",
+        "Proposal: explaining the fix and cost",
+        "Service: Replacing faulty components",
+        "Quality Check: Temperature verification"
       ]
     },
     "television": {
@@ -460,6 +517,25 @@
         "Sound issues",
         "Panel damage",
         "Motherboard failure"
+      ],
+      "brandsTitle": "Brands We Service",
+      "brands": [
+        "Sony",
+        "Samsung",
+        "LG",
+        "Panasonic",
+        "Mi",
+        "Vu",
+        "TCL",
+        "OnePlus",
+        "Philips"
+      ],
+      "processTitle": "How We Work",
+      "process": [
+        "Diagnosis: Analyzing screen/board issues",
+        "Estimation: Providing repair costs",
+        "Fixing: Component level repair",
+        "Display Check: Ensuring picture clarity"
       ]
     },
     "microwave": {
@@ -472,6 +548,25 @@
         "Control panel fault",
         "Door switch issue",
         "Sparking"
+      ],
+      "brandsTitle": "Brands We Service",
+      "brands": [
+        "LG",
+        "Samsung",
+        "IFB",
+        "Godrej",
+        "Panasonic",
+        "Whirlpool",
+        "Bajaj",
+        "Morphy Richards",
+        "Haier"
+      ],
+      "processTitle": "Service Steps",
+      "process": [
+        "Safety Check: Leakage and radiation test",
+        "Fault Finding: Magnetron/PCB check",
+        "Repair: Part replacement",
+        "Operational Test: Heating and function check"
       ]
     },
     "water-purifier": {
@@ -487,7 +582,22 @@
       ],
       "brandsTitle": "Brands Supported",
       "brands": [
-        "Kent, Aquaguard, Pureit, Livpure & more"
+        "Kent",
+        "Aquaguard",
+        "Pureit",
+        "Livpure",
+        "Blue Star",
+        "LG",
+        "AO Smith",
+        "Havells",
+        "Eureka Forbes"
+      ],
+      "processTitle": "Service Process",
+      "process": [
+        "TDS Check: Initial water quality test",
+        "Filter Change: Replacing sediment/carbon filters",
+        "Membrane Check: RO membrane health",
+        "Final Test: Pure water TDS verification"
       ]
     }
   }

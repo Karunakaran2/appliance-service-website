@@ -52,7 +52,7 @@ const FAQ = () => {
 
       {/* FAQ Section */}
       <section className="section-padding bg-white dark:bg-gray-900">
-        <div className="container-custom max-w-4xl">
+        <div className="container-custom max-w-6xl">
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             <button
@@ -81,7 +81,7 @@ const FAQ = () => {
           </div>
 
           {/* FAQ Accordion */}
-          <div className="space-y-4">
+          <div className="grid md:grid-cols-2 gap-6 items-start">
             {filteredFAQs.length > 0 ? (
               filteredFAQs.map((faq, index) => (
                 <motion.div
@@ -89,7 +89,7 @@ const FAQ = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}
-                  className="card overflow-hidden"
+                  className="card overflow-hidden h-full"
                 >
                   <button
                     onClick={() => setActiveIndex(activeIndex === index ? null : index)}
@@ -128,7 +128,7 @@ const FAQ = () => {
                 </motion.div>
               ))
             ) : (
-              <div className="text-center py-12">
+              <div className="col-span-full text-center py-12">
                 <p className="text-gray-600 dark:text-gray-400 text-lg">
                   {t('faqPage.noQuestions')}
                 </p>
