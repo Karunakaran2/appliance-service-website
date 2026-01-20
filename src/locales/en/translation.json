@@ -1,0 +1,494 @@
+{
+  "header": {
+    "title": "Appliance Service",
+    "subtitle": "Expert Repair Services",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "callNow": "Call Now",
+    "washingMachine": "Washing Machine Service",
+    "acService": "AC Service & Gas Refill",
+    "refrigerator": "Refrigerator Repair",
+    "television": "Television Repair",
+    "microwave": "Microwave Service",
+    "waterPurifier": "Water Purifier Service",
+    "toggleMenu": "Toggle menu"
+  },
+  "footer": {
+    "about": "About Us",
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "contactUs": "Contact Us",
+    "allRightsReserved": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "description": "Multi Brand Home Appliance Repair & Installation Service providing expert repairs for washing machines, AC, refrigerators, TVs, microwaves, and water purifiers."
+  },
+  "hero": {
+    "trustedBy": "Trusted by 10,000+ Customers",
+    "titlePrefix": "Multi Brand Home Appliance",
+    "titleHighlight": "Repair & Installation",
+    "titleSuffix": "Service",
+    "tagline": "Expert Technicians | Same-Day Service | Genuine Parts | Doorstep Repair",
+    "sameDayService": "Same-Day Service",
+    "expertTechnicians": "Expert Technicians",
+    "genuineParts": "Genuine Parts",
+    "warranty": "90-Day Warranty",
+    "callNow": "Call Now",
+    "whatsapp": "WhatsApp",
+    "bookService": "Book Service",
+    "emergencyService": "24/7 Emergency Service",
+    "rating": "4.8 Rating",
+    "reviews": "300+ Reviews",
+    "years": "8+ Years",
+    "experience": "Experience"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Professional repair and maintenance services for all your home appliances",
+    "learnMore": "Learn More",
+    "washing-machine": {
+      "name": "Washing Machine Service",
+      "shortDesc": "Complete washing machine repair and maintenance for all brands",
+      "description": "Expert washing machine repair services for all brands including Samsung, LG, Whirlpool, Bosch, IFB, and more. We handle all types of issues from simple repairs to complex diagnostics.",
+      "problems": [
+        "Machine not starting",
+        "Water not draining",
+        "Excessive noise during spin",
+        "Door not opening/closing",
+        "Water leakage",
+        "Drum not rotating",
+        "Error codes displayed",
+        "Clothes not getting clean"
+      ],
+      "features": [
+        "Doorstep service",
+        "Same-day repair",
+        "Genuine spare parts",
+        "90-day service warranty",
+        "Free diagnostics",
+        "Experienced technicians"
+      ]
+    },
+    "ac-service": {
+      "name": "AC Service & Gas Refill",
+      "shortDesc": "Complete AC repair, installation, and gas refilling services",
+      "description": "Professional AC service including installation, repair, maintenance, and gas refilling for all brands. Split AC, window AC, and central AC services available.",
+      "problems": [
+        "AC not cooling",
+        "Water leakage",
+        "Strange noises",
+        "Foul smell",
+        "High electricity bills",
+        "Compressor issues",
+        "Remote not working",
+        "Ice formation on coils"
+      ],
+      "features": [
+        "Gas leak detection",
+        "Complete servicing",
+        "Filter cleaning",
+        "Installation service",
+        "AMC packages available",
+        "Energy efficiency tips"
+      ]
+    },
+    "refrigerator": {
+      "name": "Refrigerator Repair",
+      "shortDesc": "Expert refrigerator and freezer repair for all brands",
+      "description": "Comprehensive refrigerator repair services covering single door, double door, side-by-side, and French door models from all major brands.",
+      "problems": [
+        "Not cooling properly",
+        "Freezer not working",
+        "Water leakage",
+        "Excessive noise",
+        "Ice buildup",
+        "Door seal problems",
+        "Light not working",
+        "Temperature fluctuation"
+      ],
+      "features": [
+        "Gas refilling",
+        "Thermostat replacement",
+        "Compressor repair",
+        "Door seal replacement",
+        "Defrost system repair",
+        "Emergency service"
+      ]
+    },
+    "television": {
+      "name": "Television Repair",
+      "shortDesc": "LED, LCD, and Smart TV repair services",
+      "description": "Expert television repair for all brands and models including LED, LCD, OLED, QLED, and Smart TVs. Screen replacement, motherboard repair, and software updates.",
+      "problems": [
+        "No display",
+        "No sound",
+        "Lines on screen",
+        "Remote not working",
+        "HDMI port issues",
+        "Screen flickering",
+        "Smart features not working",
+        "Power issues"
+      ],
+      "features": [
+        "Screen replacement",
+        "Panel repair",
+        "Motherboard repair",
+        "Software updates",
+        "HDMI port repair",
+        "Wall mounting service"
+      ]
+    },
+    "microwave": {
+      "name": "Microwave Service",
+      "shortDesc": "Microwave oven repair and maintenance",
+      "description": "Complete microwave oven repair services including solo, grill, and convection models. Magnetron replacement, control panel repair, and safety inspections.",
+      "problems": [
+        "Not heating food",
+        "Turntable not rotating",
+        "Display not working",
+        "Door not closing",
+        "Sparking inside",
+        "Unusual sounds",
+        "Timer issues",
+        "Keypad malfunction"
+      ],
+      "features": [
+        "Magnetron replacement",
+        "Waveguide repair",
+        "Door seal replacement",
+        "Control panel repair",
+        "Safety testing",
+        "Cleaning service"
+      ]
+    },
+    "water-purifier": {
+      "name": "Water Purifier Service",
+      "shortDesc": "RO, UV, and UF water purifier servicing",
+      "description": "Complete water purifier service including RO membrane replacement, filter changes, UV lamp replacement, and TDS adjustment for all brands.",
+      "problems": [
+        "Water taste changed",
+        "Low water flow",
+        "RO not working",
+        "UV lamp not glowing",
+        "Water leakage",
+        "Storage tank issues",
+        "Foul smell",
+        "High TDS levels"
+      ],
+      "features": [
+        "RO membrane replacement",
+        "Filter replacement",
+        "UV lamp replacement",
+        "TDS testing",
+        "Annual maintenance",
+        "Installation service"
+      ]
+    }
+  },
+  "servicesPage": {
+    "title": "Home Appliance Repair & Installation Services in Chennai & Trichy",
+    "subtitle": "We provide professional, fast, and affordable multi-brand home appliance repair and installation services across Chennai, Trichy, and nearby areas. With over 15+ years of experience, our expert technicians handle all major appliance issues using genuine spare parts and transparent pricing. Whether it’s an urgent breakdown or routine maintenance, we ensure same-day doorstep service for your convenience.",
+    "readMore": "Read More",
+    "commonProblems": "Common Problems We Fix",
+    "bookNow": "Book Now",
+    "whatsapp": "WhatsApp",
+    "ctaTitle": "Need Immediate Appliance Service?",
+    "ctaSubtitle": "Call Now or WhatsApp us for quick assistance and same-day service.",
+    "callNow": "Call Now",
+    "whatsappChat": "WhatsApp Chat"
+  },
+  "trustBar": {
+    "experience": "Years Experience",
+    "rating": "Rating",
+    "reviews": "Reviews",
+    "sameDayService": "Same Day Service",
+    "genuineParts": "Genuine Spare Parts"
+  },
+  "emergencyCTA": {
+    "title": "Do You Need Immediate Diagnostics?",
+    "getDiagnostics": "Get Free Diagnostics"
+  },
+  "aboutSnapshot": {
+    "title": "About Our Service",
+    "description1": "We provide a one-stop solution for all your home appliance repair and fitting needs. With over 15 years of experience and a team of highly skilled technicians, we ensure your appliances are in the best hands.",
+    "description2": "Our commitment to quality, transparency, and customer satisfaction has made us the trusted choice for thousands of homeowners across Tamil Nadu.",
+    "professionalStaff": "Highly Professional Staff",
+    "qualityControl": "Quality Control System",
+    "accurateTesting": "Accurate Testing Process",
+    "timelyDelivery": "Timely Delivery"
+  },
+  "stats": {
+    "clients": "Satisfied Clients",
+    "experience": "Years Experience",
+    "repairs": "Repairs Done"
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Us",
+    "subtitle": "We are committed to providing the best appliance repair services with unmatched quality and customer care",
+    "doorstep": "Doorstep Service",
+    "doorstepDesc": "We come to your location with all necessary tools and equipment",
+    "sameDay": "Same-Day Repairs",
+    "sameDayDesc": "Fast and efficient service to get your appliances running quickly",
+    "genuineParts": "Genuine Spare Parts",
+    "genuinePartsDesc": "Only authentic parts from authorized dealers and manufacturers",
+    "pricing": "Transparent Pricing",
+    "pricingDesc": "No hidden charges. You know exactly what you are paying for",
+    "warranty": "Service Warranty",
+    "warrantyDesc": "90-day warranty on all repairs and replaced parts",
+    "technicians": "Expert Technicians",
+    "techniciansDesc": "10-15+ years of experience with certified professionals"
+  },
+  "process": {
+    "title": "Our Service Process",
+    "subtitle": "Simple and transparent process from booking to completion",
+    "contact": "Contact Us",
+    "contactDesc": "Call us or book online to schedule your service appointment",
+    "analysis": "Breakdown Analysis",
+    "analysisDesc": "Our technician will diagnose the problem and provide a transparent quote",
+    "repairs": "Performing Repairs",
+    "repairsDesc": "We fix your appliance using genuine parts and professional expertise",
+    "fix": "Fix the Problem",
+    "fixDesc": "Your appliance is restored to perfect working condition with warranty"
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "subtitle": "Real feedback from our satisfied customers",
+    "1": {
+      "review": "Excellent service! The technician arrived on time and fixed my AC within an hour. Very professional and the pricing was transparent. Highly recommended!",
+      "service": "AC Service"
+    },
+    "2": {
+      "review": "My washing machine was making strange noises. They diagnosed the problem quickly and replaced the faulty part with genuine Samsung parts. Great service!",
+      "service": "Washing Machine Repair"
+    },
+    "3": {
+      "review": "Quick and efficient service. My fridge was not cooling properly, and they fixed it the same day. The technician explained everything clearly. Very satisfied!",
+      "service": "Refrigerator Service"
+    },
+    "4": {
+      "review": "Professional and courteous service. They repaired my LED TV screen and it looks as good as new. Reasonable pricing and good warranty. Thank you!",
+      "service": "TV Repair"
+    },
+    "5": {
+      "review": "My microwave stopped heating. They came the next day, replaced the magnetron, and tested everything thoroughly. Works perfectly now!",
+      "service": "Microwave Service"
+    },
+    "6": {
+      "review": "Regular RO service was due. They changed all filters, cleaned the system, and checked TDS levels. Water tastes much better now. Great work!",
+      "service": "Water Purifier Service"
+    }
+  },
+  "contactModal": {
+    "title": "Book Your Service",
+    "subtitle": "Get expert repair service at your doorstep",
+    "thankYou": "Thank You!",
+    "confirmation": "We'll contact you shortly to confirm your service appointment.",
+    "yourName": "Your Name",
+    "enterName": "Enter your name",
+    "phoneNumber": "Phone Number",
+    "enterPhone": "Enter 10-digit mobile number",
+    "serviceType": "Service Type",
+    "selectService": "Select a service",
+    "bookNow": "Book Now",
+    "submitting": "Submitting...",
+    "error": "There was an error submitting the form. Please try again.",
+    "orReachUs": "Or reach us directly",
+    "closeModal": "Close modal"
+  },
+  "faqPage": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our appliance repair services",
+    "searchPlaceholder": "Search questions...",
+    "all": "All",
+    "noQuestions": "No questions found matching your search.",
+    "ctaTitle": "Still Have Questions?",
+    "ctaSubtitle": "Our customer support team is here to help you",
+    "contactUs": "Contact Us",
+    "categories": {
+      "Service Area": "Service Area",
+      "Service": "Service",
+      "Parts": "Parts",
+      "Warranty": "Warranty",
+      "Pricing": "Pricing",
+      "Brands": "Brands",
+      "Booking": "Booking",
+      "Payment": "Payment",
+      "Technicians": "Technicians",
+      "AMC": "AMC"
+    }
+  },
+  "faqData": {
+    "1": {
+      "question": "What areas do you serve?",
+      "answer": "We provide home appliance repair services across Tamil Nadu, including Chennai, Trichy, Madurai, Coimbatore, Salem, and Tiruppur. Contact us to check if we serve your area."
+    },
+    "2": {
+      "question": "Do you provide same-day service?",
+      "answer": "Yes, we offer same-day service for most repairs. Our technicians are available 24/7 for emergency repairs. Book early in the day for guaranteed same-day service."
+    },
+    "3": {
+      "question": "Are your spare parts genuine?",
+      "answer": "Absolutely! We use only genuine spare parts sourced directly from authorized dealers and manufacturers. This ensures quality and longevity of the repairs."
+    },
+    "4": {
+      "question": "What is your service warranty?",
+      "answer": "We provide a 90-day warranty on all repairs and replaced parts. If the same issue occurs within the warranty period, we will fix it free of charge."
+    },
+    "5": {
+      "question": "How much do you charge for diagnostics?",
+      "answer": "We offer FREE diagnostics for all appliances. You only pay for the repair if you choose to proceed with our service. No hidden charges!"
+    },
+    "6": {
+      "question": "Do I need to bring my appliance to your service center?",
+      "answer": "No! We provide doorstep repair services. Our technicians will come to your location with all necessary tools and spare parts to fix your appliance on-site."
+    },
+    "7": {
+      "question": "What brands do you service?",
+      "answer": "We service all major brands including Samsung, LG, Whirlpool, Bosch, IFB, Godrej, Haier, Panasonic, Sony, Voltas, Blue Star, and many more."
+    },
+    "8": {
+      "question": "How can I book a service?",
+      "answer": "You can book a service by calling us at +91 12345 67890, sending a WhatsApp message, or filling out the online booking form on our website. We will confirm your appointment within 30 minutes."
+    },
+    "9": {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept cash, UPI, credit/debit cards, and online bank transfers. Payment is required only after the repair is completed and you are satisfied with the service."
+    },
+    "10": {
+      "question": "Are your technicians certified?",
+      "answer": "Yes, all our technicians are highly trained and certified with 10-15+ years of experience in appliance repair. They undergo regular training to stay updated with the latest technologies."
+    },
+    "11": {
+      "question": "Do you offer annual maintenance contracts (AMC)?",
+      "answer": "Yes, we offer comprehensive AMC packages for AC, washing machines, refrigerators, and water purifiers. These packages include regular servicing, priority support, and discounted repairs."
+    },
+    "12": {
+      "question": "What if the repair is not successful?",
+      "answer": "If we cannot fix your appliance on-site, we will provide you with an honest assessment and alternative solutions. We never charge for unsuccessful repairs or diagnostics."
+    }
+  },
+  "serviceDetails": {
+    "washing-machine": {
+      "title": "Washing Machine Repair Service in Chennai & Trichy",
+      "intro": "We offer professional washing machine repair services for all major brands and models. Our technicians specialize in diagnosing and fixing issues quickly, ensuring smooth and efficient performance.",
+      "problemsTitle": "Common Problems",
+      "problems": [
+        "Water leakage",
+        "Drum not spinning",
+        "Excessive noise or vibration",
+        "Drainage issues",
+        "Power failure",
+        "Error codes"
+      ],
+      "typesTitle": "Types We Service",
+      "types": [
+        "Front Load",
+        "Top Load",
+        "Semi-Automatic",
+        "Fully Automatic"
+      ],
+      "whyChooseTitle": "Why Choose Us",
+      "whyChoose": [
+        "Same-day doorstep repair",
+        "Genuine spare parts",
+        "Transparent pricing",
+        "Experienced technicians",
+        "Service warranty"
+      ]
+    },
+    "ac-service": {
+      "title": "AC Service & Gas Refill in Chennai & Trichy",
+      "intro": "Complete AC installation, servicing, gas refilling, and breakdown repair for all brands. We ensure efficient cooling and energy-saving performance.",
+      "servicesTitle": "Services Offered",
+      "services": [
+        "AC installation & uninstallation",
+        "General servicing",
+        "Gas refilling",
+        "Cooling issue repair",
+        "PCB & electrical repair"
+      ],
+      "problemsTitle": "Common AC Problems",
+      "problems": [
+        "AC not cooling",
+        "Water leakage",
+        "Gas leakage",
+        "Power tripping",
+        "Unusual noise"
+      ],
+      "whyChooseTitle": "Why Choose Us",
+      "whyChoose": [
+        "Proper gas charging",
+        "Clean & neat service",
+        "Energy-efficient solutions",
+        "Same-day service"
+      ]
+    },
+    "refrigerator": {
+      "title": "Refrigerator Repair Service in Chennai & Trichy",
+      "intro": "Expert solutions for cooling issues, gas leakage, and compressor problems. We handle single door, double door, and side-by-side refrigerators.",
+      "issuesTitle": "Issues We Fix",
+      "issues": [
+        "Cooling problems",
+        "Gas leakage",
+        "Compressor failure",
+        "Water leakage",
+        "Excess frost"
+      ],
+      "whyChooseTitle": "Why Choose Us",
+      "whyChoose": [
+        "Accurate diagnosis",
+        "Genuine spare parts",
+        "Affordable pricing",
+        "Warranty on service"
+      ]
+    },
+    "television": {
+      "title": "Television Repair Service in Chennai & Trichy",
+      "intro": "Professional LED, LCD, and Smart TV repair at your doorstep. We fix display issues, sound problems, and motherboard failures.",
+      "supportedTitle": "Supported TVs",
+      "supported": [
+        "LED",
+        "LCD",
+        "Smart / Android TV"
+      ],
+      "issuesTitle": "Issues Fixed",
+      "issues": [
+        "No display",
+        "Sound issues",
+        "Panel damage",
+        "Motherboard failure"
+      ]
+    },
+    "microwave": {
+      "title": "Microwave Oven Repair Service in Chennai & Trichy",
+      "intro": "Safe and efficient microwave servicing and repair by trained technicians. We fix heating issues, control panel faults, and more.",
+      "issuesTitle": "Common Issues",
+      "issues": [
+        "Not heating",
+        "Turntable not rotating",
+        "Control panel fault",
+        "Door switch issue",
+        "Sparking"
+      ]
+    },
+    "water-purifier": {
+      "title": "Water Purifier Service in Chennai & Trichy",
+      "intro": "RO, UV, and water purifier installation, repair, and filter replacement services. We ensure you get clean and safe drinking water.",
+      "servicesTitle": "Services",
+      "services": [
+        "RO filter replacement",
+        "UV repair",
+        "Installation",
+        "AMC service",
+        "Water quality testing"
+      ],
+      "brandsTitle": "Brands Supported",
+      "brands": [
+        "Kent, Aquaguard, Pureit, Livpure & more"
+      ]
+    }
+  }
+}

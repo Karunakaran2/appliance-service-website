@@ -2,17 +2,21 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Search } from 'lucide-react';
 import { faqData, faqCategories } from '../data/faqData';
+import { useTranslation } from 'react-i18next';
 
 const FAQ = () => {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredFAQs = faqData.filter((faq) => {
     const matchesCategory = selectedCategory === 'All' || faq.category === selectedCategory;
+    const translatedQuestion = t(`faqData.${faq.id}.question`);
+    const translatedAnswer = t(`faqData.${faq.id}.answer`);
     const matchesSearch =
-      faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
+      translatedQuestion.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      translatedAnswer.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
@@ -26,9 +30,9 @@ const FAQ = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="heading-xl mb-6">Frequently Asked Questions</h1>
+            <h1 className="heading-xl mb-6">{t('faqPage.title')}</h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Find answers to common questions about our appliance repair services
+              {t('faqPage.subtitle')}
             </p>
 
             {/* Search Bar */}
@@ -38,7 +42,7 @@ const FAQ = () => {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search questions..."
+                placeholder={t('faqPage.searchPlaceholder')}
                 className="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
               />
             </div>
@@ -59,7 +63,7 @@ const FAQ = () => {
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
               }`}
             >
-              All
+              {t('faqPage.all')}
             </button>
             {faqCategories.map((category) => (
               <button
@@ -71,7 +75,7 @@ const FAQ = () => {
                     : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
-                {category}
+                {t(`faqPage.categories.${category}`)}
               </button>
             ))}
           </div>
@@ -93,10 +97,10 @@ const FAQ = () => {
                   >
                     <div className="flex-1 pr-4">
                       <span className="inline-block px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400 rounded-full text-xs font-semibold mb-2">
-                        {faq.category}
+                        {t(`faqPage.categories.${faq.category}`)}
                       </span>
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                        {faq.question}
+                        {t(`faqData.${faq.id}.question`)}
                       </h3>
                     </div>
                     <ChevronDown
@@ -116,7 +120,7 @@ const FAQ = () => {
                         className="overflow-hidden"
                       >
                         <div className="pt-4 pb-2 text-gray-600 dark:text-gray-400 leading-relaxed">
-                          {faq.answer}
+                          {t(`faqData.${faq.id}.answer`)}
                         </div>
                       </motion.div>
                     )}
@@ -126,7 +130,7 @@ const FAQ = () => {
             ) : (
               <div className="text-center py-12">
                 <p className="text-gray-600 dark:text-gray-400 text-lg">
-                  No questions found matching your search.
+                  {t('faqPage.noQuestions')}
                 </p>
               </div>
             )}
@@ -138,16 +142,16 @@ const FAQ = () => {
       <section className="section-padding bg-gradient-to-r from-primary-600 to-secondary-600 dark:from-primary-800 dark:to-secondary-800">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Still Have Questions?
+            {t('faqPage.ctaTitle')}
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Our customer support team is here to help you
+            {t('faqPage.ctaSubtitle')}
           </p>
           <a
             href="/contact"
             className="inline-block bg-white text-primary-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            Contact Us
+            {t('faqPage.contactUs')}
           </a>
         </div>
       </section>

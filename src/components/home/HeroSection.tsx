@@ -2,7 +2,10 @@ import { Phone, MessageCircle, Calendar } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { siteConfig } from '../../data/siteConfig';
 
+import { useTranslation } from 'react-i18next';
+
 const HeroSection = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden">
       {/* Background Pattern */}
@@ -27,7 +30,7 @@ const HeroSection = () => {
               transition={{ delay: 0.2 }}
               className="inline-block mb-4 px-4 py-2 bg-secondary-100 dark:bg-secondary-900/30 text-secondary-700 dark:text-secondary-400 rounded-full text-sm font-semibold"
             >
-              ⭐ Trusted by 50,000+ Customers
+              ⭐ {t('hero.trustedBy')}
             </motion.div>
 
             <motion.h1
@@ -36,11 +39,11 @@ const HeroSection = () => {
               transition={{ delay: 0.3 }}
               className="heading-xl mb-6"
             >
-              Multi Brand Home Appliance{' '}
+              {t('hero.titlePrefix')}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500">
-                Repair & Installation
+                {t('hero.titleHighlight')}
               </span>{' '}
-              Service
+              {t('hero.titleSuffix')}
             </motion.h1>
 
             <motion.p
@@ -49,7 +52,7 @@ const HeroSection = () => {
               transition={{ delay: 0.4 }}
               className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0"
             >
-              {siteConfig.tagline}
+              {t('hero.tagline')}
             </motion.p>
 
             {/* Trust Indicators */}
@@ -61,19 +64,19 @@ const HeroSection = () => {
             >
               <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
                 <span className="text-green-500">✓</span>
-                <span>Same-Day Service</span>
+                <span>{t('hero.sameDayService')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
                 <span className="text-green-500">✓</span>
-                <span>Expert Technicians</span>
+                <span>{t('hero.expertTechnicians')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
                 <span className="text-green-500">✓</span>
-                <span>Genuine Parts</span>
+                <span>{t('hero.genuineParts')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
                 <span className="text-green-500">✓</span>
-                <span>90-Day Warranty</span>
+                <span>{t('hero.warranty')}</span>
               </div>
             </motion.div>
 
@@ -89,7 +92,7 @@ const HeroSection = () => {
                 className="flex items-center space-x-2 btn-primary group"
               >
                 <Phone className="w-5 h-5 group-hover:animate-pulse" />
-                <span>Call Now</span>
+                <span>{t('hero.callNow')}</span>
               </a>
               <a
                 href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
@@ -98,11 +101,11 @@ const HeroSection = () => {
                 className="flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 <MessageCircle className="w-5 h-5" />
-                <span>WhatsApp</span>
+                <span>{t('hero.whatsapp')}</span>
               </a>
               <button className="flex items-center space-x-2 btn-outline">
                 <Calendar className="w-5 h-5" />
-                <span>Book Service</span>
+                <span>{t('hero.bookService')}</span>
               </button>
             </motion.div>
 
@@ -113,7 +116,7 @@ const HeroSection = () => {
               transition={{ delay: 0.7 }}
               className="mt-8 text-center lg:text-left"
             >
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">24/7 Emergency Service</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">{t('hero.emergencyService')}</p>
               <a
                 href={`tel:${siteConfig.contact.phone}`}
                 className="text-2xl font-bold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-300"
@@ -128,14 +131,16 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="hidden lg:block"
+            className="hidden lg:block p-8"
           >
             <div className="relative">
               {/* Main Image Placeholder */}
-              <div className="relative bg-gradient-to-br from-primary-100 to-secondary-100 dark:from-primary-900/30 dark:to-secondary-900/30 rounded-3xl p-8 shadow-2xl">
-                <div className="aspect-square bg-gradient-to-br from-primary-200 to-secondary-200 dark:from-primary-800 dark:to-secondary-800 rounded-2xl flex items-center justify-center">
-                  <span className="text-8xl">🔧</span>
-                </div>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src="/assets/images/placeholders/hero-image.png" 
+                  alt="Appliance Service Hero" 
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Floating Elements */}
@@ -149,8 +154,8 @@ const HeroSection = () => {
                     <span className="text-2xl">⭐</span>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-900 dark:text-white">5.0 Rating</p>
-                    <p className="text-xs text-gray-600 dark:text-gray-400">300+ Reviews</p>
+                    <p className="text-sm font-semibold text-gray-900 dark:text-white">{t('hero.rating')}</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">{t('hero.reviews')}</p>
                   </div>
                 </div>
               </motion.div>
@@ -165,8 +170,8 @@ const HeroSection = () => {
                     <span className="text-2xl">🏆</span>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-900 dark:text-white">15+ Years</p>
-                    <p className="text-xs text-gray-600 dark:text-gray-400">Experience</p>
+                    <p className="text-sm font-semibold text-gray-900 dark:text-white">{t('hero.years')}</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">{t('hero.experience')}</p>
                   </div>
                 </div>
               </motion.div>

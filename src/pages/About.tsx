@@ -73,8 +73,12 @@ const About = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-primary-100 to-secondary-100 dark:from-primary-900/30 dark:to-secondary-900/30 rounded-3xl p-8"
             >
-              <div className="aspect-square bg-gradient-to-br from-primary-200 to-secondary-200 dark:from-primary-800 dark:to-secondary-800 rounded-2xl flex items-center justify-center">
-                <span className="text-9xl">🏆</span>
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src="/assets/images/placeholders/our-story.png" 
+                  alt="Our Team" 
+                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
               </div>
             </motion.div>
           </div>
@@ -129,8 +133,12 @@ const About = () => {
               viewport={{ once: true }}
               className="order-2 lg:order-1 bg-gradient-to-br from-primary-100 to-secondary-100 dark:from-primary-900/30 dark:to-secondary-900/30 rounded-3xl p-8"
             >
-              <div className="aspect-square bg-gradient-to-br from-primary-200 to-secondary-200 dark:from-primary-800 dark:to-secondary-800 rounded-2xl flex items-center justify-center">
-                <span className="text-9xl">✅</span>
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src="/assets/images/placeholders/quality-assurance.png" 
+                  alt="Quality Assurance" 
+                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
               </div>
             </motion.div>
 

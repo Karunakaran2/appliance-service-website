@@ -2,23 +2,26 @@ import { Award, Star, Clock, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { siteConfig } from '../../data/siteConfig';
 
+import { useTranslation } from 'react-i18next';
+
 const TrustBar = () => {
+  const { t } = useTranslation();
   const trustItems = [
     {
       icon: <Award className="w-8 h-8" />,
-      text: `${siteConfig.stats.experience} Years Experience`,
+      text: `${siteConfig.stats.experience} ${t('trustBar.experience')}`,
     },
     {
       icon: <Star className="w-8 h-8" />,
-      text: `${siteConfig.stats.rating}⭐ Google Rating (${siteConfig.stats.reviews}+ Reviews)`,
+      text: `${siteConfig.stats.rating}⭐ ${t('trustBar.rating')} (${siteConfig.stats.reviews}+ ${t('trustBar.reviews')})`,
     },
     {
       icon: <Clock className="w-8 h-8" />,
-      text: 'Same Day Service',
+      text: t('trustBar.sameDayService'),
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      text: 'Genuine Spare Parts',
+      text: t('trustBar.genuineParts'),
     },
   ];
 

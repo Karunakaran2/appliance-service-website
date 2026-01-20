@@ -1,156 +1,163 @@
-import { useEffect } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { CheckCircle, Phone, MessageCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { CheckCircle, Phone, ArrowRight } from 'lucide-react';
 import { servicesData } from '../data/servicesData';
 import { siteConfig } from '../data/siteConfig';
 
 const Services = () => {
-  const { } = useParams();
-  const location = useLocation();
-
-  useEffect(() => {
-    // Scroll to specific service if hash is present
-    if (location.hash) {
-      const id = location.hash.replace('#', '');
-      const element = document.getElementById(id);
-      if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
-      }
-    }
-  }, [location]);
+  const { t } = useTranslation();
 
   return (
     <div className="pt-20">
-      {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      {/* Services Hero Section */}
+      <section className="section-padding bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden">
         <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <h1 className="heading-xl mb-6">Our Services</h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
-              Professional repair and maintenance for all your home appliances
-            </p>
-          </motion.div>
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="lg:w-1/2"
+            >
+              <h1 className="heading-xl mb-6 text-gray-900 dark:text-white">
+                {t('servicesPage.title')}
+              </h1>
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                {t('servicesPage.subtitle')}
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a href={`tel:${siteConfig.contact.phone}`} className="btn-primary">
+                  <Phone className="w-5 h-5 mr-2" />
+                  {t('hero.callNow')}
+                </a>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="lg:w-1/2 relative"
+            >
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src="/assets/images/placeholders/services_overview_hero.png" 
+                  alt="Appliance Repair Technicians" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Services Details */}
-      {servicesData.map((service, index) => (
-        <section
-          key={service.id}
-          id={service.slug}
-          className={`section-padding ${
-            index % 2 === 0 ? 'bg-white dark:bg-gray-900' : 'bg-gray-50 dark:bg-gray-800/50'
-          }`}
-        >
-          <div className="container-custom">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* Services List Grid */}
+      <section className="section-padding bg-white dark:bg-gray-900">
+        <div className="container-custom">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map((service, index) => (
               <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className={index % 2 === 0 ? '' : 'lg:order-2'}
+                transition={{ delay: index * 0.1 }}
+                className="card group hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800"
               >
-                <div className="inline-block mb-4 px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400 rounded-full text-sm font-semibold">
-                  {service.icon} {service.name}
+                <div className="relative h-48 -mx-6 -mt-6 mb-6 overflow-hidden bg-gray-100 dark:bg-gray-800 rounded-t-xl">
+                  <img 
+                    src={service.image} 
+                    alt={t(`services.${service.slug}.name`)}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <h2 className="heading-md mb-4">{service.name}</h2>
-                <p className="text-gray-600 dark:text-gray-400 mb-6 text-lg">
-                  {service.description}
-                </p>
-
-                <div className="mb-8">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                    Common Problems We Fix
+                
+                <div className="flex items-center mb-4">
+                  <span className="text-3xl mr-3 bg-primary-50 dark:bg-primary-900/30 w-12 h-12 flex items-center justify-center rounded-lg">{service.icon}</span>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                    {t(`services.${service.slug}.name`)}
                   </h3>
-                  <div className="grid sm:grid-cols-2 gap-3">
-                    {service.problems.map((problem, idx) => (
-                      <div key={idx} className="flex items-start space-x-2">
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-600 dark:text-gray-400">{problem}</span>
-                      </div>
-                    ))}
-                  </div>
                 </div>
-
-                <div className="flex flex-wrap gap-4">
-                  <a href={`tel:${siteConfig.contact.phone}`} className="btn-primary">
-                    <Phone className="w-5 h-5 inline mr-2" />
-                    Book Now
-                  </a>
-                  <a
-                    href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
-                  >
-                    <MessageCircle className="w-5 h-5 inline mr-2" />
-                    WhatsApp
-                  </a>
-                </div>
+                
+                <p className="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3">
+                  {t(`services.${service.slug}.shortDesc`)}
+                </p>
+                
+                <Link 
+                  to={`/services/${service.slug}`} 
+                  className="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold hover:text-primary-700 dark:hover:text-primary-300 group-hover:translate-x-1 transition-transform"
+                >
+                  {t('servicesPage.readMore')} <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className={index % 2 === 0 ? '' : 'lg:order-1'}
-              >
-                <div className="bg-gradient-to-br from-primary-100 to-secondary-100 dark:from-primary-900/30 dark:to-secondary-900/30 rounded-3xl p-8">
-                  <div className="aspect-square bg-gradient-to-br from-primary-200 to-secondary-200 dark:from-primary-800 dark:to-secondary-800 rounded-2xl flex items-center justify-center">
-                    <span className="text-9xl">{service.icon}</span>
-                  </div>
-                </div>
-
-                <div className="mt-6 grid sm:grid-cols-2 gap-4">
-                  {service.features.map((feature, idx) => (
-                    <div
-                      key={idx}
-                      className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md"
-                    >
-                      <CheckCircle className="w-5 h-5 text-primary-500 mb-2" />
-                      <span className="text-sm font-medium text-gray-900 dark:text-white">
-                        {feature}
-                      </span>
+      {/* Why Choose Us */}
+      <section className="section-padding bg-gray-50 dark:bg-gray-800">
+        <div className="container-custom">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="lg:w-1/2">
+               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src="/assets/images/placeholders/services_why_choose_us.png"
+                  alt="Why Choose Us" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            
+            <div className="lg:w-1/2">
+              <h2 className="heading-md mb-8">{t('whyChooseUs.title')}</h2>
+              <div className="space-y-6">
+                 {[
+                    'sameDay',
+                    'doorstep',
+                    'genuineParts',
+                    'technicians',
+                    'warranty'
+                 ].map((item, index) => (
+                    <div key={index} className="flex items-start">
+                       <CheckCircle className="w-6 h-6 text-primary-500 mr-4 mt-1 flex-shrink-0" />
+                       <div>
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+                             {t(`whyChooseUs.${item}`)}
+                          </h3>
+                       </div>
                     </div>
-                  ))}
-                </div>
-              </motion.div>
+                 ))}
+              </div>
             </div>
           </div>
-        </section>
-      ))}
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-primary-600 to-secondary-600 dark:from-primary-800 dark:to-secondary-800">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Need Expert Service for Your Appliance?
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="/assets/images/placeholders/services_cta_bg.png"
+            alt="Technician Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary-900/90" />
+        </div>
+        
+        <div className="container-custom relative z-10 text-center text-white">
+          <h2 className="heading-md mb-6 text-white">
+            {t('servicesPage.ctaTitle')}
           </h2>
-          <p className="text-xl text-white/90 mb-8">
-            Get professional repair service from certified technicians
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            {t('servicesPage.ctaSubtitle')}
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href={`tel:${siteConfig.contact.phone}`} className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
-              <Phone className="w-5 h-5 inline mr-2" />
-              Call Now: {siteConfig.contact.phone}
+           <div className="flex flex-wrap justify-center gap-4">
+            <a href={`tel:${siteConfig.contact.phone}`} className="btn-white">
+               <Phone className="w-5 h-5 mr-2" />
+               {t('servicesPage.callNow')}
             </a>
-            <a
-              href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              <MessageCircle className="w-5 h-5 inline mr-2" />
-              WhatsApp Chat
-            </a>
-          </div>
+           </div>
         </div>
       </section>
     </div>

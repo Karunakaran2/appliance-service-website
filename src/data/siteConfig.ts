@@ -28,10 +28,10 @@ export const siteConfig = {
   ],
   
   stats: {
-    experience: '15+',
-    clients: '50000+',
+    experience: '8+',
+    clients: '10000+',
     repairs: '10000+',
-    rating: 5,
+    rating: 4.8,
     reviews: 300,
   },
   

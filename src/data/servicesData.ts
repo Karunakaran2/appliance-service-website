@@ -1,3 +1,6 @@
+import washingMachineImg from '../assets/images/services/washing-machine.png';
+import acServiceImg from '../assets/images/services/ac-service.png';
+
 export interface Service {
   id: number;
   name: string;
@@ -19,7 +22,7 @@ export const servicesData: Service[] = [
     icon: '🧺',
     shortDesc: 'Complete washing machine repair and maintenance for all brands',
     description: 'Expert washing machine repair services for all brands including Samsung, LG, Whirlpool, Bosch, IFB, and more. We handle all types of issues from simple repairs to complex diagnostics.',
-    image: '/assets/images/placeholders/washing-machine.jpg',
+    image: washingMachineImg,
     problems: [
       'Machine not starting',
       'Water not draining',
@@ -52,7 +55,7 @@ export const servicesData: Service[] = [
     icon: '❄️',
     shortDesc: 'Complete AC repair, installation, and gas refilling services',
     description: 'Professional AC service including installation, repair, maintenance, and gas refilling for all brands. Split AC, window AC, and central AC services available.',
-    image: '/assets/images/placeholders/ac-service.jpg',
+    image: acServiceImg,
     problems: [
       'AC not cooling',
       'Water leakage',
@@ -85,7 +88,7 @@ export const servicesData: Service[] = [
     icon: '🧊',
     shortDesc: 'Expert refrigerator and freezer repair for all brands',
     description: 'Comprehensive refrigerator repair services covering single door, double door, side-by-side, and French door models from all major brands.',
-    image: '/assets/images/placeholders/refrigerator.jpg',
+    image: '/assets/images/placeholders/refrigerator.png',
     problems: [
       'Not cooling properly',
       'Freezer not working',
@@ -118,7 +121,7 @@ export const servicesData: Service[] = [
     icon: '📺',
     shortDesc: 'LED, LCD, and Smart TV repair services',
     description: 'Expert television repair for all brands and models including LED, LCD, OLED, QLED, and Smart TVs. Screen replacement, motherboard repair, and software updates.',
-    image: '/assets/images/placeholders/tv-repair.jpg',
+    image: '/assets/images/placeholders/tv-repair.png',
     problems: [
       'No display',
       'No sound',
@@ -151,7 +154,7 @@ export const servicesData: Service[] = [
     icon: '🔥',
     shortDesc: 'Microwave oven repair and maintenance',
     description: 'Complete microwave oven repair services including solo, grill, and convection models. Magnetron replacement, control panel repair, and safety inspections.',
-    image: '/assets/images/placeholders/microwave.jpg',
+    image: '/assets/images/placeholders/microwave.png',
     problems: [
       'Not heating food',
       'Turntable not rotating',
@@ -184,7 +187,7 @@ export const servicesData: Service[] = [
     icon: '💧',
     shortDesc: 'RO, UV, and UF water purifier servicing',
     description: 'Complete water purifier service including RO membrane replacement, filter changes, UV lamp replacement, and TDS adjustment for all brands.',
-    image: '/assets/images/placeholders/water-purifier.jpg',
+    image: '/assets/images/placeholders/water-purifier.png',
     problems: [
       'Water taste changed',
       'Low water flow',

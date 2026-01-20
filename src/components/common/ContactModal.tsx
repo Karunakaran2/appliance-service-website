@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import { useForm } from '@formspree/react';
+import { useTranslation } from 'react-i18next';
 import { siteConfig } from '../../data/siteConfig';
 import { servicesData } from '../../data/servicesData';
 
@@ -10,6 +11,7 @@ interface ContactModalProps {
 }
 
 const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
+  const { t } = useTranslation();
   const [state, handleSubmit] = useForm(siteConfig.formspreeEndpoint);
   const [formData, setFormData] = useState({
     name: '',
@@ -54,8 +56,8 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
           >
             <X className="w-5 h-5" />
           </button>
-          <h2 className="text-2xl font-bold text-white font-display">Book Your Service</h2>
-          <p className="text-white/90 mt-2">Get expert repair service at your doorstep</p>
+          <h2 className="text-2xl font-bold text-white font-display">{t('contactModal.title')}</h2>
+          <p className="text-white/90 mt-2">{t('contactModal.subtitle')}</p>
         </div>
 
         {/* Form */}
@@ -78,10 +80,10 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                Thank You!
+                {t('contactModal.thankYou')}
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                We'll contact you shortly to confirm your service appointment.
+                {t('contactModal.confirmation')}
               </p>
             </div>
           ) : (
@@ -89,7 +91,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
               {/* Name */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Your Name *
+                  {t('contactModal.yourName')} *
                 </label>
                 <input
                   type="text"
@@ -99,14 +101,14 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
-                  placeholder="Enter your name"
+                  placeholder={t('contactModal.enterName')}
                 />
               </div>
 
               {/* Phone */}
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Phone Number *
+                  {t('contactModal.phoneNumber')} *
                 </label>
                 <input
                   type="tel"
@@ -117,14 +119,14 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                   required
                   pattern="[0-9]{10}"
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
-                  placeholder="Enter 10-digit mobile number"
+                  placeholder={t('contactModal.enterPhone')}
                 />
               </div>
 
               {/* Service Type */}
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Service Type *
+                  {t('contactModal.serviceType')} *
                 </label>
                 <select
                   id="service"
@@ -134,7 +136,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                   required
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                 >
-                  <option value="">Select a service</option>
+                  <option value="">{t('contactModal.selectService')}</option>
                   {servicesData.map((service) => (
                     <option key={service.id} value={service.name}>
                       {service.name}
@@ -149,12 +151,12 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 disabled={state.submitting}
                 className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {state.submitting ? 'Submitting...' : 'Book Now'}
+                {state.submitting ? t('contactModal.submitting') : t('contactModal.bookNow')}
               </button>
 
               {state.errors && (
                 <p className="text-sm text-red-500 text-center">
-                  There was an error submitting the form. Please try again.
+                  {t('contactModal.error')}
                 </p>
               )}
             </form>
@@ -163,7 +165,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
           {/* Alternative Contact */}
           <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
             <p className="text-sm text-gray-600 dark:text-gray-400 text-center mb-3">
-              Or reach us directly
+              {t('contactModal.orReachUs')}
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
@@ -171,7 +173,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 className="flex-1 flex items-center justify-center space-x-2 px-4 py-2 bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors duration-300"
               >
                 <span>📞</span>
-                <span className="font-medium">Call Now</span>
+                <span className="font-medium">{t('hero.callNow')}</span>
               </a>
               <a
                 href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
@@ -180,7 +182,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 className="flex-1 flex items-center justify-center space-x-2 px-4 py-2 bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 rounded-lg hover:bg-green-100 dark:hover:bg-green-900/30 transition-colors duration-300"
               >
                 <span>💬</span>
-                <span className="font-medium">WhatsApp</span>
+                <span className="font-medium">{t('hero.whatsapp')}</span>
               </a>
             </div>
           </div>

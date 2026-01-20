@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+import LanguageSwitcher from './LanguageSwitcher';
 import { siteConfig } from '../../data/siteConfig';
+import { useTranslation } from 'react-i18next';
 import { servicesData } from '../../data/servicesData';
 
 const Header = () => {
@@ -10,6 +12,7 @@ const Header = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,11 +28,11 @@ const Header = () => {
   }, [location]);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services', hasDropdown: true },
-    { name: 'Contact', path: '/contact' },
-    { name: 'FAQ', path: '/faq' },
+    { name: t('header.home'), path: '/' },
+    { name: t('header.about'), path: '/about' },
+    { name: t('header.services'), path: '/services', hasDropdown: true },
+    { name: t('header.contact'), path: '/contact' },
+    { name: t('header.faq'), path: '/faq' },
   ];
 
   return (
@@ -51,7 +54,7 @@ const Header = () => {
               <h1 className="text-xl font-bold text-gray-900 dark:text-white font-display">
                 {siteConfig.siteName}
               </h1>
-              <p className="text-xs text-gray-600 dark:text-gray-400">Expert Repair Services</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400">{t('header.subtitle')}</p>
             </div>
           </Link>
 
@@ -81,7 +84,7 @@ const Header = () => {
                       {servicesData.map((service) => (
                         <Link
                           key={service.id}
-                          to={`/services#${service.slug}`}
+                          to={`/services/${service.slug}`}
                           className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
                         >
                           <span className="mr-2">{service.icon}</span>
@@ -107,20 +110,21 @@ const Header = () => {
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
             <ThemeToggle />
+            <LanguageSwitcher />
             
             <a
               href={`tel:${siteConfig.contact.phone}`}
               className="hidden md:flex items-center space-x-2 btn-primary"
             >
               <Phone className="w-4 h-4" />
-              <span>Call Now</span>
+              <span>{t('header.callNow')}</span>
             </a>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="lg:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300"
-              aria-label="Toggle menu"
+              aria-label={t('header.toggleMenu')}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -150,7 +154,7 @@ const Header = () => {
                     {servicesData.map((service) => (
                       <Link
                         key={service.id}
-                        to={`/services#${service.slug}`}
+                        to={`/services/${service.slug}`}
                         className="block py-2 px-4 text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
                       >
                         <span className="mr-2">{service.icon}</span>
@@ -167,7 +171,7 @@ const Header = () => {
               className="flex items-center justify-center space-x-2 mt-4 btn-primary w-full"
             >
               <Phone className="w-4 h-4" />
-              <span>Call Now</span>
+              <span>{t('header.callNow')}</span>
             </a>
           </nav>
         </div>

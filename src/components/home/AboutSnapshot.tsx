@@ -1,12 +1,15 @@
 import { motion } from 'framer-motion';
 import { Users, CheckCircle, Award, Clock } from 'lucide-react';
 
+import { useTranslation } from 'react-i18next';
+
 const AboutSnapshot = () => {
+  const { t } = useTranslation();
   const features = [
-    { icon: <Users className="w-6 h-6" />, text: 'Highly Professional Staff' },
-    { icon: <CheckCircle className="w-6 h-6" />, text: 'Quality Control System' },
-    { icon: <Award className="w-6 h-6" />, text: 'Accurate Testing Process' },
-    { icon: <Clock className="w-6 h-6" />, text: 'Timely Delivery' },
+    { icon: <Users className="w-6 h-6" />, text: t('aboutSnapshot.professionalStaff') },
+    { icon: <CheckCircle className="w-6 h-6" />, text: t('aboutSnapshot.qualityControl') },
+    { icon: <Award className="w-6 h-6" />, text: t('aboutSnapshot.accurateTesting') },
+    { icon: <Clock className="w-6 h-6" />, text: t('aboutSnapshot.timelyDelivery') },
   ];
 
   return (
@@ -18,10 +21,12 @@ const AboutSnapshot = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gradient-to-br from-primary-100 to-secondary-100 dark:from-primary-900/30 dark:to-secondary-900/30 rounded-3xl p-8">
-              <div className="aspect-square bg-gradient-to-br from-primary-200 to-secondary-200 dark:from-primary-800 dark:to-secondary-800 rounded-2xl flex items-center justify-center">
-                <span className="text-8xl">👨‍🔧</span>
-              </div>
+            <div className="rounded-3xl overflow-hidden shadow-xl">
+              <img 
+                src="/assets/images/placeholders/about-service.png" 
+                alt="About Our Service" 
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
             </div>
           </motion.div>
 
@@ -30,15 +35,12 @@ const AboutSnapshot = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="heading-lg mb-6">About Our Service</h2>
+            <h2 className="heading-lg mb-6">{t('aboutSnapshot.title')}</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-              We provide a one-stop solution for all your home appliance repair and fitting needs. 
-              With over 15 years of experience and a team of highly skilled technicians, we ensure 
-              your appliances are in the best hands.
+              {t('aboutSnapshot.description1')}
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-              Our commitment to quality, transparency, and customer satisfaction has made us the 
-              trusted choice for thousands of homeowners across Tamil Nadu.
+              {t('aboutSnapshot.description2')}
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">

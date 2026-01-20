@@ -1,37 +1,39 @@
 import { motion } from 'framer-motion';
 import { Home, Clock, Shield, DollarSign, Award, Wrench } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const WhyChooseUs = () => {
+  const { t } = useTranslation();
   const reasons = [
     {
       icon: <Home className="w-8 h-8" />,
-      title: 'Doorstep Service',
-      description: 'We come to your location with all necessary tools and equipment',
+      title: t('whyChooseUs.doorstep'),
+      description: t('whyChooseUs.doorstepDesc'),
     },
     {
       icon: <Clock className="w-8 h-8" />,
-      title: 'Same-Day Repairs',
-      description: 'Fast and efficient service to get your appliances running quickly',
+      title: t('whyChooseUs.sameDay'),
+      description: t('whyChooseUs.sameDayDesc'),
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: 'Genuine Spare Parts',
-      description: 'Only authentic parts from authorized dealers and manufacturers',
+      title: t('whyChooseUs.genuineParts'),
+      description: t('whyChooseUs.genuinePartsDesc'),
     },
     {
       icon: <DollarSign className="w-8 h-8" />,
-      title: 'Transparent Pricing',
-      description: 'No hidden charges. You know exactly what you are paying for',
+      title: t('whyChooseUs.pricing'),
+      description: t('whyChooseUs.pricingDesc'),
     },
     {
       icon: <Award className="w-8 h-8" />,
-      title: 'Service Warranty',
-      description: '90-day warranty on all repairs and replaced parts',
+      title: t('whyChooseUs.warranty'),
+      description: t('whyChooseUs.warrantyDesc'),
     },
     {
       icon: <Wrench className="w-8 h-8" />,
-      title: 'Expert Technicians',
-      description: '10-15+ years of experience with certified professionals',
+      title: t('whyChooseUs.technicians'),
+      description: t('whyChooseUs.techniciansDesc'),
     },
   ];
 
@@ -44,9 +46,9 @@ const WhyChooseUs = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="heading-lg mb-4">Why Choose Us</h2>
+          <h2 className="heading-lg mb-4">{t('whyChooseUs.title')}</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            We are committed to providing the best appliance repair services with unmatched quality and customer care
+            {t('whyChooseUs.subtitle')}
           </p>
         </motion.div>
 

@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-
+import { useTranslation } from 'react-i18next';
 
 const StatsSection = () => {
+  const { t } = useTranslation();
   const [counts, setCounts] = useState({ clients: 0, experience: 0, repairs: 0 });
 
   useEffect(() => {
@@ -42,7 +43,7 @@ const StatsSection = () => {
             <div className="text-5xl md:text-6xl font-bold mb-2">
               {counts.clients.toLocaleString()}+
             </div>
-            <div className="text-xl font-semibold opacity-90">Satisfied Clients</div>
+            <div className="text-xl font-semibold opacity-90">{t('stats.clients')}</div>
           </motion.div>
 
           <motion.div
@@ -53,7 +54,7 @@ const StatsSection = () => {
             className="text-white"
           >
             <div className="text-5xl md:text-6xl font-bold mb-2">{counts.experience}+</div>
-            <div className="text-xl font-semibold opacity-90">Years Experience</div>
+            <div className="text-xl font-semibold opacity-90">{t('stats.experience')}</div>
           </motion.div>
 
           <motion.div
@@ -66,7 +67,7 @@ const StatsSection = () => {
             <div className="text-5xl md:text-6xl font-bold mb-2">
               {counts.repairs.toLocaleString()}+
             </div>
-            <div className="text-xl font-semibold opacity-90">Repairs Done</div>
+            <div className="text-xl font-semibold opacity-90">{t('stats.repairs')}</div>
           </motion.div>
         </div>
       </div>

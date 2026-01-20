@@ -1,31 +1,33 @@
 import { motion } from 'framer-motion';
 import { Phone, Search, Wrench, CheckCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const ProcessTimeline = () => {
+  const { t } = useTranslation();
   const steps = [
     {
       number: 1,
       icon: <Phone className="w-8 h-8" />,
-      title: 'Contact Us',
-      description: 'Call us or book online to schedule your service appointment',
+      title: t('process.contact'),
+      description: t('process.contactDesc'),
     },
     {
       number: 2,
       icon: <Search className="w-8 h-8" />,
-      title: 'Breakdown Analysis',
-      description: 'Our technician will diagnose the problem and provide a transparent quote',
+      title: t('process.analysis'),
+      description: t('process.analysisDesc'),
     },
     {
       number: 3,
       icon: <Wrench className="w-8 h-8" />,
-      title: 'Performing Repairs',
-      description: 'We fix your appliance using genuine parts and professional expertise',
+      title: t('process.repairs'),
+      description: t('process.repairsDesc'),
     },
     {
       number: 4,
       icon: <CheckCircle className="w-8 h-8" />,
-      title: 'Fix the Problem',
-      description: 'Your appliance is restored to perfect working condition with warranty',
+      title: t('process.fix'),
+      description: t('process.fixDesc'),
     },
   ];
 
@@ -38,9 +40,9 @@ const ProcessTimeline = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="heading-lg mb-4">Our Service Process</h2>
+          <h2 className="heading-lg mb-4">{t('process.title')}</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Simple and transparent process from booking to completion
+            {t('process.subtitle')}
           </p>
         </motion.div>
 

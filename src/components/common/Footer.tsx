@@ -3,7 +3,9 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'luc
 import { siteConfig } from '../../data/siteConfig';
 import { servicesData } from '../../data/servicesData';
 
+import { useTranslation } from 'react-i18next';
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -20,7 +22,7 @@ const Footer = () => {
               <h3 className="text-xl font-bold text-white font-display">{siteConfig.siteName}</h3>
             </div>
             <p className="text-sm text-gray-400 mb-4">
-              {siteConfig.description}
+              {t('footer.description')}
             </p>
             <div className="flex space-x-3">
               <a
@@ -64,31 +66,31 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-sm hover:text-primary-400 transition-colors duration-300">
-                  Home
+                  {t('header.home')}
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="text-sm hover:text-primary-400 transition-colors duration-300">
-                  About Us
+                  {t('footer.about')}
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="text-sm hover:text-primary-400 transition-colors duration-300">
-                  Our Services
+                  {t('footer.ourServices')}
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-sm hover:text-primary-400 transition-colors duration-300">
-                  Contact
+                  {t('header.contact')}
                 </Link>
               </li>
               <li>
                 <Link to="/faq" className="text-sm hover:text-primary-400 transition-colors duration-300">
-                  FAQ
+                  {t('header.faq')}
                 </Link>
               </li>
             </ul>
@@ -96,7 +98,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Our Services</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">{t('footer.ourServices')}</h3>
             <ul className="space-y-2">
               {servicesData.slice(0, 6).map((service) => (
                 <li key={service.id}>
@@ -113,7 +115,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">{t('footer.contactUs')}</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" />
@@ -150,14 +152,14 @@ const Footer = () => {
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <p className="text-sm text-gray-500">
-              © {currentYear} {siteConfig.siteName}. All rights reserved.
+              © {currentYear} {siteConfig.siteName}. {t('footer.allRightsReserved')}
             </p>
             <div className="flex items-center space-x-6">
               <Link to="/privacy" className="text-sm text-gray-500 hover:text-primary-400 transition-colors duration-300">
-                Privacy Policy
+                {t('footer.privacyPolicy')}
               </Link>
               <Link to="/terms" className="text-sm text-gray-500 hover:text-primary-400 transition-colors duration-300">
-                Terms of Service
+                {t('footer.termsOfService')}
               </Link>
             </div>
           </div>

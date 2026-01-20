@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
 import { testimonialsData } from '../../data/testimonialsData';
+import { useTranslation } from 'react-i18next';
 
 const Testimonials = () => {
+  const { t } = useTranslation();
   return (
     <section className="section-padding bg-gray-50 dark:bg-gray-800/50">
       <div className="container-custom">
@@ -12,9 +14,9 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="heading-lg mb-4">What Our Customers Say</h2>
+          <h2 className="heading-lg mb-4">{t('testimonials.title')}</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Real feedback from our satisfied customers
+            {t('testimonials.subtitle')}
           </p>
         </motion.div>
 
@@ -39,7 +41,7 @@ const Testimonials = () => {
                     {testimonial.name}
                   </h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    {testimonial.location} • {testimonial.service}
+                    {testimonial.location} • {t(`testimonials.${testimonial.id}.service`)}
                   </p>
                 </div>
               </div>
@@ -51,7 +53,7 @@ const Testimonials = () => {
               </div>
 
               <p className="text-gray-700 dark:text-gray-300 italic">
-                "{testimonial.review}"
+                "{t(`testimonials.${testimonial.id}.review`)}"
               </p>
             </motion.div>
           ))}
