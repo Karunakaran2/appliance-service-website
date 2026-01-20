@@ -56,7 +56,7 @@ const Microwave = () => {
             {/* Brands Section */}
             <div className="py-8 border-t border-gray-100 dark:border-gray-800">
                 <h2 className="heading-md text-center mb-10">{t(`${serviceKey}.brandsTitle`)}</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto px-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto px-4">
           {(t(`${serviceKey}.brands`, { returnObjects: true }) as string[]).map((brand, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center justify-center hover:shadow-md transition-shadow">
               <img
@@ -75,7 +75,7 @@ const Microwave = () => {
       <section className="section-padding bg-gray-50 dark:bg-gray-800/50">
         <div className="container-custom">
           <h2 className="heading-md text-center mb-12">{t(`${serviceKey}.processTitle`)}</h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
             {(t(`${serviceKey}.process`, { returnObjects: true }) as string[]).map((step, index) => (
               <div key={index} className="relative text-center">
                 <div className="w-16 h-16 mx-auto bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center mb-4">

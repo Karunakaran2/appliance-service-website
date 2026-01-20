@@ -45,7 +45,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto animate-scale-in">
         {/* Header */}
         <div className="relative bg-gradient-to-r from-primary-500 to-secondary-500 p-6 rounded-t-2xl">

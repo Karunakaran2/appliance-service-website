@@ -36,13 +36,13 @@ const Header = () => {
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white dark:bg-gray-900 shadow-lg'
-          : 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm'
-      }`}
-    >
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled || isMenuOpen
+            ? 'bg-white dark:bg-gray-900 shadow-lg'
+            : 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm'
+        }`}
+      >
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -133,8 +133,8 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+          className={`lg:hidden overflow-y-auto transition-all duration-300 ${
+            isMenuOpen ? 'max-h-[calc(100vh-5rem)] opacity-100 border-t border-gray-100 dark:border-gray-800' : 'max-h-0 opacity-0'
           }`}
         >
           <nav className="py-4 space-y-2">

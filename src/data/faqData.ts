@@ -51,7 +51,7 @@ export const faqData: FAQ[] = [
   {
     id: 8,
     question: 'How can I book a service?',
-    answer: 'You can book a service by calling us at +91 12345 67890, sending a WhatsApp message, or filling out the online booking form on our website. We will confirm your appointment within 30 minutes.',
+    answer: 'You can book a service by calling us at +91 97890 90737, sending a WhatsApp message, or filling out the online booking form on our website. We will confirm your appointment within 30 minutes.',
     category: 'Booking',
   },
   {

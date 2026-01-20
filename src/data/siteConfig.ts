@@ -4,9 +4,9 @@ export const siteConfig = {
   description: 'Multi Brand Home Appliance Repair & Installation Service providing expert repairs for washing machines, AC, refrigerators, TVs, microwaves, and water purifiers.',
   
   contact: {
-    phone: '+91 12345 67890',
+    phone: '+91 97890 90737',
     email: 'service@appliancepro.com',
-    whatsapp: '+91 12345 67890',
+    whatsapp: '+91 97890 90737',
     address: 'Karaikudi, Tamil Nadu, India',
     workingHours: '24/7 Emergency Service Available',
   },
