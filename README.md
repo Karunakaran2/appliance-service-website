@@ -28,50 +28,6 @@ A modern, responsive multi-brand home appliance repair and installation service 
 - **Formspree** - Form handling
 - **Lucide React** - Icons
 
-## 📁 Project Structure
-
-```
-src/
-├── assets/
-│   └── images/
-│       └── placeholders/
-├── components/
-│   ├── common/
-│   │   ├── Header.tsx
-│   │   ├── Footer.tsx
-│   │   ├── ThemeToggle.tsx
-│   │   ├── ContactModal.tsx
-│   │   └── StickyCallBar.tsx
-│   ├── home/
-│   │   ├── HeroSection.tsx
-│   │   ├── TrustBar.tsx
-│   │   ├── ServicesGrid.tsx
-│   │   ├── EmergencyCTA.tsx
-│   │   ├── AboutSnapshot.tsx
-│   │   ├── StatsSection.tsx
-│   │   ├── WhyChooseUs.tsx
-│   │   ├── ProcessTimeline.tsx
-│   │   └── Testimonials.tsx
-│   └── services/
-├── pages/
-│   ├── Home.tsx
-│   ├── About.tsx
-│   ├── Services.tsx
-│   ├── Contact.tsx
-│   └── FAQ.tsx
-├── data/
-│   ├── servicesData.ts
-│   ├── testimonialsData.ts
-│   ├── faqData.ts
-│   └── siteConfig.ts
-├── theme/
-│   └── theme.ts
-├── routes/
-│   └── AppRoutes.tsx
-├── App.tsx
-└── main.tsx
-```
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -88,87 +44,12 @@ src/
 npm install
 ```
 
-3. **Configure Formspree**
-   - Sign up at [formspree.io](https://formspree.io)
-   - Create a new form
-   - Copy your form endpoint ID
-   - Update `src/data/siteConfig.ts`:
-   ```typescript
-   formspreeEndpoint: 'YOUR_FORMSPREE_ID'
-   ```
-
-4. **Customize site configuration**
-   
-   Edit `src/data/siteConfig.ts` to update:
-   - Business name
-   - Contact information
-   - Service areas
-   - Social media links
-
 5. **Run development server**
 ```bash
 npm run dev
 ```
 
 The site will be available at `http://localhost:3000`
-
-## 📝 Customization Guide
-
-### Update Business Information
-
-Edit `src/data/siteConfig.ts`:
-
-```typescript
-export const siteConfig = {
-  siteName: 'Your Business Name',
-  contact: {
-    phone: '+91 XXXXXXXXXX',
-    email: 'your@email.com',
-    whatsapp: '+91 XXXXXXXXXX',
-    address: 'Your Address',
-  },
-  // ... other settings
-};
-```
-
-### Add/Modify Services
-
-Edit `src/data/servicesData.ts`:
-
-```typescript
-export const servicesData: Service[] = [
-  {
-    id: 1,
-    name: 'Service Name',
-    slug: 'service-slug',
-    icon: '🔧',
-    description: 'Service description',
-    // ... other properties
-  },
-];
-```
-
-### Customize Theme Colors
-
-Edit `tailwind.config.js`:
-
-```javascript
-colors: {
-  primary: {
-    500: '#1a5276', // Your primary color
-  },
-  secondary: {
-    500: '#ff9933', // Your secondary color
-  },
-}
-```
-
-### Add Images
-
-Replace placeholder images in:
-- `src/assets/images/placeholders/`
-
-Update image references in components and data files.
 
 ## 🎨 Theme
 
@@ -192,13 +73,6 @@ npm run build
 Output will be in the `dist/` directory.
 
 ## 🚀 Deployment
-
-### Netlify
-
-1. Connect your repository to Netlify
-2. Build command: `npm run build`
-3. Publish directory: `dist`
-4. Deploy!
 
 ### Vercel
 
